@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "stat453-deep-learning-ss21"
+version = "0.1.0"
+description = ""
+authors = ["markhng525 <markhng525@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10.2"
+mypy = "^1.0.0"
+jupyter = "^1.0.0"
+pandas = "^1.5.3"
+watermark = "^2.3.1"
+torchtext = "^0.14.1"
+torch = "^1.13.1"
+spacy = "^3.5.0"
+datasets = "^2.9.0"
+torchdata = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+ruff = "0.0.241"
+black = "23.1.0"
+
+[tool.mypy]
+ignore_missing_imports = true
+check_untyped_defs = true
+no_strict_optional = true
+
+# https://github.com/python/mypy/issues/10632
+[[tool.mypy.overrides]]
+module = "requests"
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
